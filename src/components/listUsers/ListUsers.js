@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux"
 
 
 function ListUsers() {
-    const user = useSelector(state => state.users);
+    const users = useSelector(state => state.users);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -14,26 +14,29 @@ function ListUsers() {
 
     return (
         <div>
-            <h2 className="text-capitalize h4 mb-4">list of users</h2>
+            <h2 className="text-capitalize h4 mb-4">list of users {users.length} users</h2>
             <div className="row">
                 <table className="table table-bordered">
-                    <thead className="bg-light">
+                    <thead>
                         <tr>
-                            <th scope="col" className="text-capitalize">id</th>
-                            <th scope="col" className="text-capitalize">full name</th>
-                            <th scope="col" className="text-capitalize">amount</th>
-                            <th scope="col" className="text-capitalize">date</th>
-                            <th scope="col" className="text-capitalize">city</th>
+                            <th className="text-capitalize">full Name</th>
+                            <th className="text-capitalize">amount</th>
+                            <th className="text-capitalize">date</th>
+                            <th className="text-capitalize">city</th>
                         </tr>
                     </thead>
                     <tbody>
+
                         {
-                            user.map(u => {
-                                <React.Fragment key={u.id}>
-                                    <p>{u.fName}</p>
-                                </React.Fragment>
-                            })
+                            users.map(user =>
+                                <tr key={user.id}>
+                                    <td>{user.fName} {user.lName}</td>
+                                    <td>{user.amount}</td>
+                                    <td>{user.date}</td>
+                                    <td>{user.city}</td>
+                                </tr>)
                         }
+
                     </tbody>
                 </table>
             </div>

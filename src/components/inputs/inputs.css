@@ -1,0 +1,11 @@
+.error {
+    position: relative;
+    top: -24px;
+    color: red;
+    font-size: 1.3em;
+    border: 1px solid red;
+    padding: 8px;
+    width: 207px;
+    display: inline-block;
+    text-align: center;
+}
