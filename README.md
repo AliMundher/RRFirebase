@@ -12,3 +12,9 @@ take all this info and storage in firsebase
 
 ----------
 
+## Techniques
+1. HTML5
+2. CSS3
+3. REACTJS
+4. REDUX
+5. FIREBASE
