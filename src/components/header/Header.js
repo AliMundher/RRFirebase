@@ -26,8 +26,6 @@ function Header() {
     })
 
 
-
-
     return (
         <div className="d-flex justify-content-between mt-5">
             <h2 className="text-capitalize">total</h2>

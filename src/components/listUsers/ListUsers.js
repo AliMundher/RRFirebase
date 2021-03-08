@@ -26,7 +26,6 @@ function ListUsers() {
                         </tr>
                     </thead>
                     <tbody>
-
                         {
                             users.map(user =>
                                 <tr key={user.id}>
@@ -36,7 +35,6 @@ function ListUsers() {
                                     <td>{user.city}</td>
                                 </tr>)
                         }
-
                     </tbody>
                 </table>
             </div>

@@ -23,13 +23,14 @@ function Inputs() {
     }
 
     const handelSubmit = (e) => {
+        console.log(e.target.value)
         e.preventDefault();
-        if (initialUser.fName === "" || initialUser.lName === "") {
-            setError("an error occurs")
+        if (user.fName !== "" || user.lName !== "") {
+            dispatch(addUser(user))
+            setError("")
         }
         else {
-            setError("")
-            dispatch(addUser(user))
+            setError("an error occurs")
         }
         setUser(initialUser)
     }
@@ -55,16 +56,16 @@ function Inputs() {
                     <div className="form-group col-12 col-md-4">
                         <label className="text-capitalize">last name:</label>
                         <input type="text" placeholder="Enter Your Last Name"
-                            className="form-control mb-2 col-mb-0"
+                            className="form-control mb-2 col-mb-0" required
                             name="lName" value={user.lName}
-                            onChange={handelChange} required />
+                            onChange={handelChange} />
                     </div>
                     <div className="form-group col-12 col-md-4">
                         <label className="text-capitalize">amount:</label>
                         <input type="number" placeholder="Enter Your Amount"
-                            className="form-control mb-2 col-mb-0"
+                            className="form-control mb-2 col-mb-0" required
                             name="amount" value={user.amount}
-                            onChange={handelChange} required />
+                            onChange={handelChange} />
                     </div>
                 </div>
 
@@ -72,15 +73,15 @@ function Inputs() {
                     <div className="form-group col-12 col-md-4">
                         <label className="text-capitalize">chose date:</label>
                         <input type="date" className="form-control mb-2 col-mb-0"
-                            name="date" value={user.date}
-                            onChange={handelChange} required />
+                            name="date" value={user.date} required
+                            onChange={handelChange} />
                     </div>
                     <div className="form-group col-12 col-md-4">
                         <label className="text-capitalize">name of city:</label>
                         <input type="text" placeholder="Enter Your Last Name"
                             className="form-control mb-2 col-mb-0"
-                            name="city" value={user.city}
-                            onChange={handelChange} required />
+                            name="city" value={user.city} required
+                            onChange={handelChange} />
                     </div>
                 </div>
             </form>
