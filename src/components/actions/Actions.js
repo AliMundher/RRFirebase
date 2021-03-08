@@ -1,14 +1,20 @@
-import { ADD_USER, FETCH_USER } from "../actionTypes/ActionsTypes";
+import { ADD_USER, DELETE_USER, FETCH_USER } from "../actionTypes/ActionsTypes";
 import { db } from "../firebase/firebase";
 
 
 // Add New User
 export const add_user = (item) => {
-
-    console.log("add user from Action")
     return {
         type: ADD_USER,
         payload: item
+    }
+}
+
+// Delete User
+export const delete_user = (id) => {
+    return {
+        type: DELETE_USER,
+        payload: id
     }
 }
 
@@ -20,11 +26,22 @@ export const fetch_user = (user) => {
     }
 }
 
+
+// Add User
 export const addUser = (item) => {
     return (dispatch) => {
         dispatch(add_user(item))
     }
 }
+
+// Delete User
+export const deleteUser = (id) => {
+    return (dispatch) => {
+        dispatch(delete_user(id))
+    }
+}
+
+
 
 export const getAllUsers = () => {
     return (dispatch) => {

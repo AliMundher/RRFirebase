@@ -23,7 +23,6 @@ function Inputs() {
     }
 
     const handelSubmit = (e) => {
-        console.log(e.target.value)
         e.preventDefault();
         if (user.fName !== "" || user.lName !== "") {
             dispatch(addUser(user))
