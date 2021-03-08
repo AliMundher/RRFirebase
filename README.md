@@ -20,4 +20,4 @@ take all this info and storage in firsebase
 5. FIREBASE
 
 
-[Demo](https://upbeat-poitras-5264bc.netlify.app/)
+[Demo](https://elegant-beaver-aef5e3.netlify.app/)
