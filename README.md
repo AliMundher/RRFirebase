@@ -18,3 +18,6 @@ take all this info and storage in firsebase
 3. REACTJS
 4. REDUX
 5. FIREBASE
+
+
+[Demo](https://upbeat-poitras-5264bc.netlify.app/)
