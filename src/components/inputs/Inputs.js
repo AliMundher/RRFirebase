@@ -29,7 +29,7 @@ function Inputs() {
             setError("")
         }
         else {
-            setError("an error occurs")
+            setError("Please Fill All The Input Fields")
         }
         setUser(initialUser)
     }
